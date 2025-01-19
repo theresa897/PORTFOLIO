@@ -1,8 +1,22 @@
-body{
+/* body{
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(20, 20, 20);
     background-color: white;
+} */
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, #ffffff, #fff4ed);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 
@@ -99,6 +113,7 @@ nav{
     flex-direction: column;
     justify-content: center;
     background-color: rgb(250, 96, 0);
+    /* background-image: conic-gradient(red, green, pink); */
 }
 
 .hero-greetings{
@@ -188,29 +203,89 @@ nav{
 
 
 /*******************/
-/* SERVICES SECTION*/
+/* About SECTION*/
 /*******************/
 
 
-.services-section{
-    height: 350PX;
-    display: flex;
+.about-section{
+    height: 380PX;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 3%;
+    padding-top: 2%;
 }
 
-.services-section .title{
+.about-section .title{
     width: 100%;
     text-align: center;
     display: flex;
     gap: 1%;
     justify-content: center;
+    color: rgb(90, 203, 70);
 }
 
-.services-section .title .title-icon{
-    width: 5%;
-    height: 20px;
+.about-section.title h3{   
+    text-decoration: underline;
+}
+
+.about-section .title .title-icon{
+    width: 2%;
+    height: 10px;
+    margin-top: 2%;
     background-color: rgb(90, 203, 70);
     border-radius: 30px 0px 20px 20px;
+}
+
+.about-text{
+    margin: auto;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    line-height: 1.6;
+    color: rgb(63, 63, 63);
+}
+
+.about-skills{
+    /* background-color: rgb(236, 236, 236); */
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-skills p{
+    flex: 30%;
+    font-weight: 900;
+    color: rgb(61, 188, 39);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.about-skills div{
+    flex: 70%;
+    display: flex;
+    gap: 3%;
+    justify-content: space-between;
+}
+
+.about-skills button{
+    width: 20%;
+    /* border: 2px solid rgb(90, 203, 70); */
+    border: none;
+    padding: 2%;
+    border-radius: 10px;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgb(90, 203, 70);
+}
+
+.about-skills button img{
+    width: 50%;
+    height: 40px;
+    margin: auto;
+    padding-bottom: 5%;
+    display: block;
+    color: rgb(90, 203, 70);
 }
