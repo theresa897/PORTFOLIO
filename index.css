@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(20, 20, 20);
+    background-color: white;
+}
+
+
+/*******************/
+/* NAVBAR SECTION*/
+/*******************/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(233, 235, 233);
+    position: relative;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+    color: rgb(59, 59, 59);
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(90, 203, 70);
+    border-radius: 70% 10% 50% 30%;
+    padding: 4px;
+    color: white;
+}
+
+.nav-menu-item{
+    padding:  9px 0 0 0;
+    cursor: pointer;
+}
+
+.nav-menu-item:hover{
+    color: rgb(129, 132, 129);
+}
+
+.nav-menu-item:active{
+    border-bottom: 2px solid rgb(90, 203, 70);
+}
+
+.nav-btn{
+    border: none;
+    background: none;
+    font-size: 15px;
+    border: 2px solid rgb(255, 111, 0);
+    padding: 7px;
+    color: rgb(255, 111, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.nav-btn:hover{
+    border: none;
+    background: none;
+    font-size: 15px;
+    border: 2px solid rgb(255, 111, 0);
+    padding: 7px;
+    color: white;
+    background-color: rgb(255, 111, 0);
+    border-radius: 10px;
+}
+
+
+/*******************/
+/* HERO SECTION*/
+/*******************/
+
+.hero-section{
+    height: 550PX;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: rgb(255, 248, 206);
+}
+
+.hero-info{
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    margin-top: 5%;
+}
+
+.hero-image-section{
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(250, 96, 0);
+}
+
+.hero-greetings{
+    font-weight: 700;
+    color: rgb(255, 111, 0);
+    margin: 0;
+}
+
+.hero-main-text{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    color: rgb(3, 28, 1);
+}
+
+.hero-job-title{
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(45, 45, 44);
+}
+
+.hero-text{
+    font-size: 14px;
+    color: rgb(94, 92, 92);
+    width: 70%;
+}
+
+.hero-btn{
+    border: none;
+    background: none;
+    font-size: 15px;
+    border: 2px solid rgb(255, 111, 0);
+    background-color: rgb(255, 111, 0);
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.hero-image{
+    height: 400px;
+    border-radius: 50%;
+}
+
+.hero-info-about{
+    background-color: white;
+    border: 2px solid rgb(229, 228, 228);
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5%;
+    font-size: 12px;
+    padding: 13px 20px 5px 20px;
+    border-radius: 100px;
+}
+
+.hero-info-about-item{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.hero-info-about-item .icon p{
+    background-color: rgb(250, 170, 109);
+    width: 60px;
+    height: 60px;
+    margin-top: 2%;
+    color: orangered;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.hero-info-about-item .text {
+    padding-left: 3px;
+}
+
+
+.hero-info-about-item .text .text-bold{
+    font-weight: 900;
+}
+
+.hero-info-about-item .text p{
+    color: orangered;
+}
+
+
+/*******************/
+/* SERVICES SECTION*/
+/*******************/
+
+
+.services-section{
+    height: 350PX;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.services-section .title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+
+.services-section .title .title-icon{
+    width: 5%;
+    height: 20px;
+    background-color: rgb(90, 203, 70);
+    border-radius: 30px 0px 20px 20px;
+}
