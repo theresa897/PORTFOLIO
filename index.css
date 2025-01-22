@@ -5,9 +5,19 @@
     background-color: white;
 } */
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    height: 100vh;
+    
+    width: 100%;
+    height: 100%;
+    padding: 0rem;
+    margin: 0rem;
+    /* margin: 0;
+    height: 100vh; */
     background: linear-gradient(270deg, #ffffff, #fff4ed);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -53,13 +63,18 @@ nav{
 .nav-menu-item{
     padding:  9px 0 0 0;
     cursor: pointer;
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    margin: 5px;
+    margin-top: 12px;
 }
 
 .nav-menu-item:hover{
     color: rgb(129, 132, 129);
 }
 
-.nav-menu-item:active{
+.nav-menu-item.active{
+    color: rgb(255, 111, 0);;
     border-bottom: 2px solid rgb(90, 203, 70);
 }
 
@@ -288,4 +303,76 @@ nav{
     padding-bottom: 5%;
     display: block;
     color: rgb(90, 203, 70);
+}
+
+/*******************/
+/* Porfolio SECTION*/
+/*******************/
+
+
+.portfolio-section{
+    height: 380PX;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    /* background-image: url("./public/images/outline_flat_seamless_arabic_geometric_ornament_pattern.jpg"); */
+}
+
+.portfolio-section .title{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    color: orangered;
+}
+
+.portfolio-section title h3{   
+    text-decoration: underline;
+}
+
+.portfolio-section .title .title-icon{
+    width: 2%;
+    height: 10px;
+    margin-top: 2%;
+    background-color: orangered;
+    border-radius: 30px 0px 20px 20px;
+}
+
+
+/*******************/
+/* Footer SECTION*/
+/*******************/
+
+footer {
+    background-color: #000; /* Black background */
+    color: #cdcdcd; /* White text */
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer-column {
+    flex: 1; /* Flex-grow to distribute space */
+    min-width: 200px; /* Ensure a minimum width */
+    margin: 0 20px;
+    padding: 10px;
+}
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+.footer-column p,
+.footer-column a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-column a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px; /* Smaller text */
+    width: 100%; /* Full width for copyright */
 }
