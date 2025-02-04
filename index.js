@@ -46,3 +46,24 @@
       cardSlider.style.transform = `translateX(${offset}px)`;
     }
     
+document.addEventListener("DOMContentLoaded", function() {
+    const items = document.querySelectorAll('.services .items');
+    
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add class to trigger animation
+                observer.unobserve(entry.target); // Stop observing after it's visible
+            }
+        });
+    }, observerOptions);
+
+    items.forEach(item => {
+        observer.observe(item); // Start observing each item
+    });
+});

@@ -635,11 +635,21 @@ nav{
 }
 
 .services-section .content .items{
+    animation: float 3s ease-in-out infinite;
     width: 25%;
     height: fit-content;
     margin: 0% 2% 0% 2%;
     text-align: center;
     padding: 2%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px */
+    }
 }
 
 .services .items:hover{
