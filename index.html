@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="Stylesheet" href="index.css"/>
-        <title>Dzeufack Nouboudem Theresa</title>
+        <title>D.N.T</title>
     </head>
     <body>
         <nav>
@@ -18,11 +18,11 @@
                 <a href="#Services" class="nav-menu-item">Services</a>
                 <a href="#Contact" class="nav-menu-item">Contact</a>
             </div>
-            <div>
+            <!-- <div>
                 <p>
                     <button class="nav-btn">Contact</button>
                 </p>
-            </div>
+            </div> -->
         </nav>
         <!---------------->
         <!--HERO SECTION-->
@@ -39,21 +39,33 @@
                 </div>
                 <div class="hero-info-about">
                     <div class="hero-info-about-item">
-                        <div class="icon"><p>m</p></div>
+                        <div class="icon">
+                            <p>
+                                <img src="./public/icons/suitcase.png" />
+                            </p>
+                        </div>
                         <div class="text">
-                            <h3 class="text-bold">3 years job</h3>
+                            <h3 class="text-bold">1 years job</h3>
                             <p>Lorem Ipsum</p>
                         </div>  
                     </div>
                     <div class="hero-info-about-item">
-                        <div class="icon"><p>m</p></div>
+                        <div class="icon">
+                            <p>
+                                <img src="./public/icons/project-launch.png" />
+                            </p>
+                        </div>
                         <div class="text">
-                            <h3 class="text-bold">500+ Projects</h3>
+                            <h3 class="text-bold">20+ Projects</h3>
                             <p>Lorem Ipsum</p>
                         </div>
                     </div>
                     <div class="hero-info-about-item">
-                        <div class="icon"><p>m</p></div>
+                        <div class="icon">
+                            <p>
+                                <img src="./public/icons/online-learning.png" />
+                            </p>
+                        </div>
                         <div class="text">
                             <h3 class="text-bold">Online 24/7</h3>
                             <p>Lorem Ipsum</p>
@@ -109,6 +121,9 @@
                     <button>
                         <img src="./public/icons/figma.png" />
                         Figma</button>
+                    <button>
+                        <img src="./public/icons/github.png" />
+                        GitHub</button>
                 </div>
             </div>
         </div>
@@ -186,6 +201,98 @@
                 <button class="next" onclick="moveSlider(1)">&#10095;</button>
             </div>
         </div>
+        
+        <!-------------------->
+        <!--SERVICES SECTION-->
+        <!-------------------->
+        
+        <div id="Services" class="services-section">
+            <div class="title">
+                <h3>Services</h3>
+                <div class="title-icon"></div>
+            </div>
+            <div class="content">
+                <div class="services">
+                    <div class="items">
+                        <img src="./public/icons/responsive-design.png"/>
+                        <p>
+                            <span>
+                                Website Development.
+                            </span>
+                            Creating responsive, user-friendly websites using HTML, CSS, and JavaScript
+                        </p>
+                    </div>
+                    <div class="items">
+                        <img src="./public/icons/app-development.png"/>
+                        <p>
+                            <span>
+                                Web Application Development.
+                            </span>
+                             Building interactive web applications using frameworks like React, Angular, or Vue.js
+                        </p>
+                    </div>
+                    <div class="items">
+                        <img src="./public/icons/color-palette.png"/>
+                        <p>
+                            <span>
+                                UI/UX Design.
+                            </span>
+                            Designing intuitive user interfaces and enhancing user experiences through wireframes and prototypes
+                        </p>
+                    </div>
+                    <div class="items">
+                        <img src="./public/icons/counterclockwise.png"/>
+                        <p>
+                            <span>
+                                Single Page Applications (SPAs).
+                            </span>
+                            Developing SPAs that provide a seamless user experience without page reloads.
+                        </p>
+                    </div>
+                    <div class="items">
+                        <img src="./public/icons/arrows.png"/>
+                        <p>
+                            <span>
+                                Version Control and Collaboration.
+                            </span>
+                            Using tools like Git for version control and collaborating with teams.
+                        </p>
+                    </div>
+                    <div class="items">
+                        <img src="./public/icons/link.png"/>
+                        <p>
+                            <span>
+                                API Integration.
+                            </span>
+                            Connecting frontend applications to backend services through RESTful APIs or GraphQL
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-------------------->
+        <!--CONTACT SECTION-->
+        <!-------------------->
+
+        <div id="Contact" class="contact-section">
+            <div class="text">
+                <h2>Get in touch</h2>
+                <p>We’d love to hear from you! Whether you have questions,
+                     feedback, or just want to say hello, feel free to reach out to us.
+                      Our team is here to assist you.Please fill out the form below,
+                       and we will get back to you as soon as possible.
+                </p>
+            </div>
+            <div class="container">
+                <form>
+                    <input type="text" placeholder="Full name"/>
+                    <input type="email" placeholder="Email"/>
+                    <textarea placeholder="Message"></textarea>
+                    <button>SEND</button>
+                </form>
+            </div>
+        </div>
 
         <!-------------------->
         <!--FOOTER SECTION-->
@@ -210,11 +317,11 @@
                 <p><a href="https://www.linkedin.com/in/theresa-d-406995243/" target="_blank">LinkedIn</a></p>
                 <p><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></p>
             </div>
-            <div class="footer-column">
+            <!-- <div class="footer-column">
                 <h4>Legal</h4>
                 <p><a href="#terms">Terms of Service</a></p>
                 <p><a href="#privacy">Privacy Policy</a></p>
-            </div>
+            </div> -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Dzeufack Nouboudem Theresa. All rights reserved.</p>
             </div>
