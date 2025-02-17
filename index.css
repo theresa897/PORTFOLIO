@@ -10,14 +10,20 @@ html {
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
 body {
     
     width: 100%;
     height: 100vh;
     padding: 0rem;
     margin: 0rem;
-    /* margin: 0;
-    height: 100vh; */
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    font-weight: 500;
     background: linear-gradient(270deg, #ffffff, #fff4ed);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -42,6 +48,10 @@ nav{
     justify-content: space-between;
     border-bottom: 2px solid rgb(233, 235, 233);
     position: relative;
+}
+
+.menu-btn{
+    display: none;
 }
 
 .nav-menu{
@@ -96,6 +106,24 @@ nav{
     font-weight: 700;
 }
 
+
+
+.modal-overlay {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1001; /* Higher than overlay */
+}
+
 .nav-btn:hover{
     border: none;
     background: none;
@@ -107,6 +135,42 @@ nav{
     border-radius: 10px;
 }
 
+.phone-nav{
+    display: none; /* Hidden by default */
+    align-items: flex-end;
+    background-color: #0d0d0d6e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to ensure it covers other elements */
+}
+
+.phone-nav .container{   
+    /* transform: translate(-50%, -50%); */
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    z-index: 1001; /* Higher than overlay */
+}
+
+.phone-nav .container .logo{
+    width: 10%;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.phone-nav-menu{
+    color: gray;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
 
 /*******************/
 /* HERO SECTION*/
@@ -115,6 +179,7 @@ nav{
 .hero-section{
     height: 550PX;
     display: flex;
+    flex-wrap: wrap;
     padding-left: 10%;
     padding-right: 10%;
     background-color: rgb(253, 249, 226);
@@ -133,7 +198,8 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(250, 96, 0);
+    align-items: center;
+    /* background-color: rgb(250, 96, 0); */
     /* background-image: conic-gradient(red, green, pink); */
 }
 
@@ -187,8 +253,8 @@ nav{
 }
 
 .hero-image{
-    height: 400px;
-    width: 70%;
+    height: 500px;
+    width: 100%;
     /* border-radius: 50%; */
     justify-self: baseline;
 }
@@ -316,7 +382,6 @@ nav{
     flex: 70%;
     display: flex;
     gap: 3%;
-
     justify-content: space-between;
 }
 
@@ -443,7 +508,7 @@ nav{
   }
 
   .card .text p{
-    font-size: 18px;
+    font-size: 15px;
     text-transform: capitalize;
     font-weight: 700;
 
@@ -717,7 +782,7 @@ nav{
     width: 70%;
     margin: auto;
     margin-left: 6%;
-    height: 70%;
+    height: 55%;
     border-radius: 20px;
 }
 
@@ -736,7 +801,7 @@ form input{
     box-shadow: 0 2px 5px rgba(144, 144, 144, 0.509);
     padding: 2%;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: rgb(81, 81, 81);
 }
 
@@ -747,11 +812,11 @@ form input:focus{
 form textarea{
     color: rgb(81, 81, 81);
     font-size: 15px;
-    box-shadow: 0 2px 5px rgba(144, 144, 144, 0.9);
+    box-shadow: 0 2px 5px rgba(144, 144, 144, 0.509);
     border: none;
     background-color: rgba(242, 242, 242, 0.719);
     padding: 3%;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 100px;
 }
 
@@ -768,7 +833,7 @@ form button{
     margin: auto;
     color: white;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /*******************/
@@ -810,3 +875,122 @@ footer {
     font-size: 14px; /* Smaller text */
     width: 100%; /* Full width for copyright */
 }
+
+/*********************/
+/* Responsive Styles */
+/*********************/
+
+@media screen and (max-width: 480px) {
+
+    .services-section .content .items{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+
+
+@media screen and (max-width: 819px) {
+    .menu-btn{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+
+    .phone-nav{
+        display: none;
+    }
+
+    .hero-section{
+        height: fit-content;
+
+    }
+
+    .hero-info-about{
+        background-color: white;
+        border: 2px solid rgb(229, 228, 228);
+        display: flex;
+        justify-content: space-around;
+        font-size: 12px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 75px;
+        padding: 13px 15px 0px 15px;
+        border-radius: 100px;
+        width: 92%;
+    }
+
+    .about-section{
+        height: fit-content;
+    }
+
+    .about-text{
+        text-align: center;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .about-skills{
+        display: block;
+    }
+
+    .about-skills p{
+        text-align: center;
+    }
+
+    .about-skills .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 4%;
+    }
+
+    .about-skills .container button{
+        margin-top: 4%;
+    }
+
+    .portfolio-section{
+        height: fit-content;
+    }
+
+    .portfolio-section .subtitle p{
+        width: 100%;
+        text-align: justify;
+    }
+    
+    .services-section{
+        height: fit-content;
+    }
+    
+    .services-section .content .items{
+        width: 42%;
+        /* margin-bottom: 5%; */
+    }
+
+    .contact-section{
+        height: 600px;
+    }
+
+    .contact-section .text{
+        justify-content: center;
+        width: 100%;
+        height: 34%;
+    }
+
+    .contact-section .container{
+        width: 80%;
+        margin-left: 0%;
+    }
+}
+/* 
+Small Laptops: 1281px - 1366px
+Medium Laptops: 1367px - 1440px
+Large Laptops/Desktops: 1441px - 1920px
+
+Small Tablets: 768px - 1024px
+Large Tablets: 1025px - 1280px
+
+Small Mobile (e.g., Phones): 320px - 480px
+Medium Mobile: 481px - 767px */

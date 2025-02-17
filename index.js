@@ -67,3 +67,21 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(item); // Start observing each item
     });
 });
+
+    const modalOverlay = document.getElementById('modalOverlay');
+    const closeModal = document.getElementById('closeModal');
+
+    // Function to open the modal
+    function openModal() {
+        modalOverlay.style.display = 'block';
+    }
+
+    // Function to close the modal
+    closeModal.onclick = function() {
+        modalOverlay.style.display = 'none';
+    };
+    
+    // Example trigger to open the modal
+    window.onload = function() {
+        openModal(); // Opens the modal when the page loads
+    };
