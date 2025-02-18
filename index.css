@@ -55,9 +55,9 @@ nav{
 }
 
 .menu-btn img{
-    width: 30px;
-    height: 30px;
-    margin-top: 60%;
+    width: 25px;
+    height: 25px;
+    margin-top: 90%;
     cursor: pointer;
 }
 
@@ -505,7 +505,7 @@ nav{
 
   .card .image img{
     width: 100%;
-    
+    flex: 60%;
   }
 
   .card .text{
@@ -916,6 +916,7 @@ footer {
         background-color: white;
         border: 2px solid rgb(229, 228, 228);
         display: flex;
+        width: fit-content;
         flex-direction: column;
         justify-content: space-around;
         font-size: 12px;
@@ -926,6 +927,13 @@ footer {
         border-radius: 30px;
         /* width: 92%; */
     }
+
+    
+.hero-info-about-item{
+    display: flex;
+    gap: 4px;
+    justify-content: left;
+}
 
     .about-section{
         height: fit-content;
@@ -961,6 +969,7 @@ footer {
 
     .portfolio-section{
         height: fit-content;
+        
 
     }
 
