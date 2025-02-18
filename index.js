@@ -85,3 +85,12 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onload = function() {
         openModal(); // Opens the modal when the page loads
     };
+
+    function downloadCV() {
+        const link = document.createElement('a');
+        link.href = './public/file/cv.pdf'; // Replace with the path to your CV PDF
+        link.download = 'D.N.T.pdf'; // Replace with the desired file name
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
