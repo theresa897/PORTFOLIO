@@ -99,3 +99,19 @@
         link.click();
         document.body.removeChild(link);
     }
+
+    (function() {
+        emailjs.init("vl8z4tNEieT8AQvlP"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        emailjs.sendForm("service_vvvei2x", "template_i2la3cb", this)
+            .then(function() {
+                alert('Message sent successfully!');
+            }, function(error) {
+                alert('Failed to send message. Please try again later.');
+                console.error('Error:', error);
+            });
+    });

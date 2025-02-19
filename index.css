@@ -290,8 +290,8 @@ nav{
 }
 
 .hero-image{
-    height: 350px;
-    width: 350px;
+    height: 320px;
+    width: 320px;
     border-radius: 50%;
     justify-self: baseline;
     background-color: rgb(255, 111, 0);
