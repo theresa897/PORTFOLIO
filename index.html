@@ -19,13 +19,14 @@
                 <a href="#Contact" class="nav-menu-item">Contact</a>
             </div>
             <div class="menu-btn">
-                <img src="./public/icons/menu (1).png" alt="menu-button"/>
+                <img onclick="openMenu()" src="./public/icons/menu (1).png" alt="menu-button"/>
             </div>
         </nav>
        
-        <div class="phone-nav">
+        <div id="phone-nav" class="phone-nav">
             <div class="container">
-                <div>
+                <p id="close" class="close">x</p>
+                <div class="div">
                     <p class="logo">D.N.T</p>
                 </div>
                 <div class="phone-nav-menu">
@@ -47,7 +48,7 @@
                     <p class="hero-greetings">Hi, I'm</p>
                     <p class="hero-main-text">Dzeufack Nouboudem Theresa</p>
                     <p class="hero-job-title">Frontend Developer</p>
-                    <p class="hero-text">Random Lorem Ipsum sit dolor text, Use to fill this space and which you ca modify any time you wish.</p>
+                    <p class="hero-text">I specialize in transforming ideas into engaging digital experiences.</p>
                     <button class="hero-btn" onclick="downloadCV()">Download CV</button>
                 </div>
                 <div class="hero-info-about">
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div class="hero-image-section">
-                <img class="hero-image" src="./public/images/me.png" alt="hero image" />
+                <img class="hero-image" src="./public/images/new.png" alt="hero image" />
             </div>
         </div>
 
@@ -337,6 +338,7 @@
             </div> -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Dzeufack Nouboudem Theresa. All rights reserved.</p>
+                <!-- {new Date().getFullYear()} -->
             </div>
         </footer>
     </body>

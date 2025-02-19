@@ -46,34 +46,44 @@
       cardSlider.style.transform = `translateX(${offset}px)`;
     }
     
-document.addEventListener("DOMContentLoaded", function() {
-    const items = document.querySelectorAll('.services .items');
-    
-    const observerOptions = {
-        root: null, // Use the viewport as the root
-        threshold: 0.1 // Trigger when 10% of the item is visible
-    };
+    document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll('.services .items');
+        
+        const observerOptions = {
+            root: null, // Use the viewport as the root
+            threshold: 0.1 // Trigger when 10% of the item is visible
+        };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible'); // Add class to trigger animation
-                observer.unobserve(entry.target); // Stop observing after it's visible
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); // Add class to trigger animation
+                    observer.unobserve(entry.target); // Stop observing after it's visible
+                }
+            });
+        }, observerOptions);
+
+        items.forEach(item => {
+            observer.observe(item); // Start observing each item
         });
-    }, observerOptions);
-
-    items.forEach(item => {
-        observer.observe(item); // Start observing each item
     });
-});
 
-    const modalOverlay = document.getElementById('modalOverlay');
-    const closeModal = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('phone-nav');
+    const closeModal = document.getElementById('close');
+    const menuItems = document.getElementsByClassName('phone-nav-menu-item')
+    console.log(menuItems)
+    var element
+
+    for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].onclick = function() {
+            modalOverlay.style.display = 'none';
+        }
+        
+    }
 
     // Function to open the modal
-    function openModal() {
-        modalOverlay.style.display = 'block';
+    function openMenu() {
+        modalOverlay.style.display = 'flex';
     }
 
     // Function to close the modal
@@ -81,11 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
         modalOverlay.style.display = 'none';
     };
     
-    // Example trigger to open the modal
-    window.onload = function() {
-        openModal(); // Opens the modal when the page loads
-    };
-
     function downloadCV() {
         const link = document.createElement('a');
         link.href = './public/file/cv.pdf'; // Replace with the path to your CV PDF
