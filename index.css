@@ -938,6 +938,13 @@ footer {
         flex-direction: column;
         flex-wrap: nowrap;
     }
+
+    
+    .logo1 {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+    }
     
     .hero-text{
         width: 100%;
