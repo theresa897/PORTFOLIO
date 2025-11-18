@@ -224,7 +224,6 @@ nav{
 
     padding: 10px 40px 10px 45px;
     border-radius: 6px;
-    border: 2px solid #5ACB46; /* your green */
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -239,8 +238,7 @@ nav{
 
 .lang-select:focus {
     outline: none;
-    border-color: #FF6F00; /* your orange */
-    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+    color: green;
 }
 
 #langSwitcher {
