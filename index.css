@@ -15,6 +15,13 @@ a{
 }
 
 
+    
+    .logo1 {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+    }
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     width: 100%;
@@ -63,8 +70,9 @@ nav{
 
 .nav-menu{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     gap: 7%;
+    flex: 50%;
     color: rgb(59, 59, 59);
 }
 
@@ -80,6 +88,7 @@ nav{
 .nav-menu-item{
     padding:  9px 0 0 0;
     cursor: pointer;
+    font-size: 15px;
     text-decoration: none;
     color: rgb(59, 59, 59);
     margin: 5px;
@@ -208,6 +217,84 @@ nav{
 .phone-nav-menu-item:hover{
     background-color: rgb(230, 230, 230);
 }
+
+.lang-select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 10px 40px 10px 45px;
+    border-radius: 6px;
+    border: 2px solid #5ACB46; /* your green */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 25px 20px;
+
+    /* default = English flag */
+    background-image: url('https://flagcdn.com/gb.svg');
+}
+
+.lang-select:focus {
+    outline: none;
+    border-color: #FF6F00; /* your orange */
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+#langSwitcher {
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 10px 40px 10px 45px;
+    border-radius: 6px;
+    border: 2px solid #5ACB46;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 25px 20px;
+}
+
+#langSwitcher:focus {
+    outline: none;
+    border-color: #FF6F00;
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lang-switcher .flag {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-switcher .flag:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lang-switcher .flag.active {
+    border: 2px solid #5ACB46; /* your green color (rgb(90, 203, 70)) */
+    box-shadow: 0 0 10px rgba(90, 203, 70, 0.7);
+    transform: scale(1.15);
+}
+
 
 /*******************/
 /* HERO SECTION*/
@@ -796,6 +883,7 @@ nav{
 
 .contact-section .text h2{
     color: rgb(250, 96, 0);
+    margin-top: 20%;
 }
 
 .contact-section .text p{

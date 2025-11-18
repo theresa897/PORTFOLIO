@@ -33,11 +33,11 @@
       const totalCards = cards.length;
       currentIndex += direction;
     
-      // If we are at the first card, go back to the last one
+      
       if (currentIndex < 0) {
         currentIndex = totalCards - 1;
       }
-      // If we are at the last card, go to the first one
+      
       if (currentIndex >= totalCards) {
         currentIndex = 0;
       }
@@ -115,3 +115,47 @@
                 console.error('Error:', error);
             });
     });
+// Load default language
+let currentLang = localStorage.getItem("lang") || "en";
+applyTranslations(currentLang);
+
+// Set the dropdown value
+const langSelect = document.getElementById("langSwitcher");
+langSelect.value = currentLang;
+
+// Update flag on load
+updateFlag(currentLang);
+
+// Apply translations
+function applyTranslations(lang) {
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        el.innerHTML = translations[lang][key];
+    });
+
+    // Update placeholders
+    document.querySelectorAll("[data-lang-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-lang-placeholder");
+        el.placeholder = translations[lang][key];
+    });
+}
+
+// Dropdown change event
+langSelect.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    currentLang = lang;
+
+    localStorage.setItem("lang", lang);
+    applyTranslations(lang);
+    updateFlag(lang); // <-- Update flag automatically
+});
+
+
+// --- FLAG SWITCHER ---
+function updateFlag(lang) {
+    if (lang === "en") {
+        langSelect.style.backgroundImage = "url('https://flagcdn.com/gb.svg')";
+    } else {
+        langSelect.style.backgroundImage = "url('https://flagcdn.com/fr.svg')";
+    }
+}
