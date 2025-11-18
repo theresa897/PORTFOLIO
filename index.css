@@ -678,7 +678,6 @@ nav{
 
 .about-skills button{
     width: 20%;
-    /* border: 2px solid rgb(90, 203, 70); */
     border: none;
     padding: 2%;
     border-radius: 10px;
@@ -752,7 +751,7 @@ nav{
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Move up by 10px */
+        transform: translateY(-10px); 
     }
 }
 
@@ -771,7 +770,6 @@ nav{
     word-spacing: 5px;
     letter-spacing: 1px;
     font-weight: 500;
-    /* font-family: Arial, Helvetica, sans-serif; */
     line-height: 1.6;
     color: rgb(63, 63, 63);
 }
@@ -782,7 +780,6 @@ nav{
 /*******************/ 
 
 .contact-section{
-    /* width: 100%; */
     height: 550px;
     padding-left: 10%;
     padding-right: 10%;
@@ -807,7 +804,6 @@ nav{
     word-spacing: 4px;
     letter-spacing: 1px;
     font-weight: 500;
-    /* font-family: Arial, Helvetica, sans-serif; */
     line-height: 1.6;
     color: rgb(63, 63, 63);
 }
@@ -960,7 +956,7 @@ footer {
         height: 237px;
         /* padding: 13px 15px 0px 10px; */
         border-radius: 30px;
-        /* width: 92%; */
+        width: 100%;
     }
 
     
